@@ -15,6 +15,7 @@ chef_version      '>= 12.19' if respond_to?(:chef_version)
 # %w(mongodb runit).each do |dep|
 #   depends dep
 # end
+depends 'sc-mongodb'
 
 %w(debian ubuntu).each do |os|
   supports os
