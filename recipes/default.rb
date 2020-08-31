@@ -42,8 +42,6 @@ end
 node.override['mongodb']['install_method'] = 'none'
 # node.override['mongodb']['config']['mongod']['net']['bindIp'] = 'localhost'
 
-include_recipe "sc-mongodb::default"
-
 node.default['mongodb']['package_version'] = '4.0.6'
 
 include_recipe 'sc-mongodb'
