@@ -42,7 +42,7 @@ node.override['mongodb']['config']['mongod']['net']['bindIp'] = 'localhost'
 
 include_recipe "sc-mongodb::default"
 
-include_recipe "nodejs::default"
+# include_recipe "nodejs::default"
 
 # include_recipe 'mongodb::10gen_repo'
 # include_recipe 'mongodb::default'
@@ -58,7 +58,7 @@ include_recipe "nodejs::default"
 #   exit $STATUS
 #   EOH
 # end
-#
+
 # remote_file "#{Chef::Config['file_cache_path']}/#{tar_name}" do
 #   source node['rocketchat']['url']
 #   checksum node['rocketchat']['checksum']
@@ -81,7 +81,7 @@ include_recipe "nodejs::default"
 #   mode '0755'
 #   action :create
 # end
-#
+
 # execute 'Extract Rocket.Chat' do
 #   cwd Chef::Config['file_cache_path']
 #   command "tar xf #{Chef::Config['file_cache_path']}/#{tar_name} -C rocketchat"
