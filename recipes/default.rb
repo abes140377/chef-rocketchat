@@ -46,7 +46,7 @@ node.default['mongodb']['package_version'] = '4.0.6'
 
 include_recipe 'sc-mongodb'
 
-# include_recipe "nodejs::default"
+include_recipe "nodejs::default"
 
 # include_recipe 'mongodb::10gen_repo'
 # include_recipe 'mongodb::default'
