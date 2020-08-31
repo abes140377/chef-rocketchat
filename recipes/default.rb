@@ -42,6 +42,8 @@ node.override['mongodb']['config']['mongod']['net']['bindIp'] = 'localhost'
 
 include_recipe "sc-mongodb::default"
 
+include_recipe "nodejs::default"
+
 # include_recipe 'mongodb::10gen_repo'
 # include_recipe 'mongodb::default'
 #

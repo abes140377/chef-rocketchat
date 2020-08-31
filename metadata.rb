@@ -16,6 +16,7 @@ chef_version      '>= 12.19' if respond_to?(:chef_version)
 #   depends dep
 # end
 depends 'sc-mongodb'
+depends 'nodejs', '~> 7.0.1'
 
 %w(debian ubuntu).each do |os|
   supports os
