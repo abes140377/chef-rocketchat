@@ -65,28 +65,28 @@ include_recipe "nodejs::default"
 #   EOH
 # end
 
-# remote_file "#{Chef::Config['file_cache_path']}/#{tar_name}" do
-#   source node['rocketchat']['url']
-#   checksum node['rocketchat']['checksum']
-#   owner node['rocketchat']['user']
-#   group node['rocketchat']['group']
-#   mode '0644'
-#   action :create_if_missing
-# end
-#
-# directory node['rocketchat']['install_dir'] do
-#   owner node['rocketchat']['user']
-#   group node['rocketchat']['group']
-#   mode '0755'
-#   action :create
-# end
-#
-# directory "#{Chef::Config['file_cache_path']}/rocketchat" do
-#   owner node['rocketchat']['user']
-#   group node['rocketchat']['group']
-#   mode '0755'
-#   action :create
-# end
+remote_file "#{Chef::Config['file_cache_path']}/#{tar_name}" do
+  source node['rocketchat']['url']
+  checksum node['rocketchat']['checksum']
+  owner node['rocketchat']['user']
+  group node['rocketchat']['group']
+  mode '0644'
+  action :create_if_missing
+end
+
+directory node['rocketchat']['install_dir'] do
+  owner node['rocketchat']['user']
+  group node['rocketchat']['group']
+  mode '0755'
+  action :create
+end
+
+directory "#{Chef::Config['file_cache_path']}/rocketchat" do
+  owner node['rocketchat']['user']
+  group node['rocketchat']['group']
+  mode '0755'
+  action :create
+end
 
 # execute 'Extract Rocket.Chat' do
 #   cwd Chef::Config['file_cache_path']
