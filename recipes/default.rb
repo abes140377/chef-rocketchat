@@ -39,7 +39,7 @@ end
 # node.override['mongodb']['config']['smallfiles'] = true
 # node.override['mongodb']['config']['rest'] = true
 
-node.override['mongodb']['install_method'] = 'none'
+# node.override['mongodb']['install_method'] = 'none'
 # node.override['mongodb']['config']['mongod']['net']['bindIp'] = 'localhost'
 
 node.default['mongodb']['package_version'] = '4.0.6'
